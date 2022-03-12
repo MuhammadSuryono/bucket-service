@@ -13,7 +13,7 @@
 |
 */
 
-$router->get('bucket-be', function () use ($router) {
+$router->get('bucket-be/public', function () use ($router) {
     return response()->json([
         "status" => "success",
         "message" => "Welcome to the API",
@@ -22,7 +22,7 @@ $router->get('bucket-be', function () use ($router) {
     ]);
 });
 
-$router->group(['prefix' => 'cbt-be/api/v1'], function () use ($router)
+$router->group(['prefix' => 'bucket-be/public/api/v1'], function () use ($router)
 {
     // Category Question
     $router->group(['prefix' => 'bucket'], function () use ($router)
